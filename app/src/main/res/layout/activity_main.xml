@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.lishuaihua.camera2demo.AutoFitSurfaceView
+        android:id="@+id/autoFitSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#444444"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_water_camera_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:text="取消"
+                />
+
+            <TextView
+                android:id="@+id/tv_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_sdt"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="12dp"
+                android:drawablePadding="4dp"
+                android:text="打开闪光灯"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_photo_graph"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/icon_camera"/>
+
+        <ImageView
+            android:id="@+id/iv_water_camera_flip"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@mipmap/icon_front_camera" />
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/iv_show_camera2_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/rl_bottom"
+        android:scaleType="fitXY"
+        tools:visibility="visible"
+        android:visibility="gone"
+        />
+</RelativeLayout>
